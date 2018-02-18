@@ -1,0 +1,10 @@
+# Default Python gitignore from https://stackoverflow.com/questions/3719243/recommended-gitignore-file-for-python-projects
+bin
+develop-eggs
+dist
+downloads
+eggs
+parts
+src/*.egg-info
+lib
+lib64
