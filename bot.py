@@ -28,10 +28,11 @@ slack_client = SlackClient(os.environ.get('SLACK_BOT_TOKEN'))
 bot_id = None
 
 # constants
-RTM_READ_DELAY = 1 # 1 second delay between reading from RTM
+RTM_READ_DELAY  = 1 # 1 second delay between reading from RTM
 EXAMPLE_COMMAND = "/"
-MENTION_REGEX = "^(bot\s)(.*)"
-COMMANDS = ["help - List commands", "summary - Summarize an article. Usage: \"bot /summary ARTICLE_LINK\""]
+MENTION_REGEX   = "^(bot\s)(.*)"
+COMMANDS        = ["help", "summary"]
+COMMANDS_HELP   = ["help - List commands", "summary - Summarize an article. Usage: \"bot /summary ARTICLE_LINK\""]
 
 def parse_bot_commands(slack_events):
   """
@@ -106,7 +107,7 @@ def handle_command(command, channel):
 
     if command == "help":
       str = ""
-      for x in COMMANDS:
+      for x in COMMANDS_HELP:
         str += "/" + x + "\n"
 
       response = "Available commands:\n" + str
