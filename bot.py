@@ -24,10 +24,6 @@ SENTENCES_COUNT = 10
 # instantiate Slack client
 slack_client = SlackClient(os.environ.get('SLACK_BOT_TOKEN'))
 
-api_token = os.environ.get('SMMRY_API_TOKEN')
-api_url_base = 'https://api.smmry.com'
-headers = {'Content-Type': 'application/json'}
-
 # Slack id of the bot. It's instantiated on connection
 bot_id = None
 
